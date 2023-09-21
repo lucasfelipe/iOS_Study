@@ -54,6 +54,26 @@ class BudgetCategoriesTableViewController: UITableViewController {
         title = "Budget"
     }
     
+    private func deleteBudgetCategory(_ budgetCategory: BudgetCategory) {
+        persistentContainer.viewContext.delete(budgetCategory)
+        
+        do {
+            try persistentContainer.viewContext.save()
+        } catch {
+            showAlert(title: "Error", message: "Unable to delete budget category.")
+        }
+    }
+    
+    // UITableViewDelegate functions
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        
+        if editingStyle == .delete {
+            let budgetCategory = fetchResultsController.object(at: indexPath)
+            deleteBudgetCategory(budgetCategory)
+        }
+        
+    }
+    
     // UITableViewDataSource delegate functions
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return (fetchResultsController.fetchedObjects ?? []).count

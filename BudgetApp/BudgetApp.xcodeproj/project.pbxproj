@@ -10,6 +10,7 @@
 		0A5309E22AB8DCF3000D9E7B /* BudgetCategoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5309E12AB8DCF3000D9E7B /* BudgetCategoryTableViewCell.swift */; };
 		0A5309E52AB8E2E8000D9E7B /* BudgetCategory+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5309E42AB8E2E8000D9E7B /* BudgetCategory+CoreDataClass.swift */; };
 		0A5309E72AB8E3C8000D9E7B /* NSSet+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5309E62AB8E3C8000D9E7B /* NSSet+Extensions.swift */; };
+		0A60CBA02ABCD19100430C3F /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A60CB9F2ABCD19100430C3F /* UIViewController+Extensions.swift */; };
 		0A6584562AAF9E85004587C3 /* BudgetDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A6584552AAF9E85004587C3 /* BudgetDetailsViewController.swift */; };
 		0A6584582AAFA56E004587C3 /* Double+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A6584572AAFA56E004587C3 /* Double+Extensions.swift */; };
 		0A68C1212AAE6707007E090B /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A68C1202AAE6707007E090B /* String+Extensions.swift */; };
@@ -25,6 +26,7 @@
 		0A5309E12AB8DCF3000D9E7B /* BudgetCategoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetCategoryTableViewCell.swift; sourceTree = "<group>"; };
 		0A5309E42AB8E2E8000D9E7B /* BudgetCategory+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BudgetCategory+CoreDataClass.swift"; sourceTree = "<group>"; };
 		0A5309E62AB8E3C8000D9E7B /* NSSet+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSSet+Extensions.swift"; sourceTree = "<group>"; };
+		0A60CB9F2ABCD19100430C3F /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
 		0A6584552AAF9E85004587C3 /* BudgetDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetDetailsViewController.swift; sourceTree = "<group>"; };
 		0A6584572AAFA56E004587C3 /* Double+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Extensions.swift"; sourceTree = "<group>"; };
 		0A68C1202AAE6707007E090B /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
@@ -65,12 +67,23 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		0A60CBA12ABCD30100430C3F /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				8D1B49CF291AF24B005185D5 /* BudgetCategoriesTableViewController.swift */,
+				0AED0AF02AABE05B0023B738 /* AddBudgetCategoryViewController.swift */,
+				0A6584552AAF9E85004587C3 /* BudgetDetailsViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
 		0A68C11F2AAE66E8007E090B /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
 				0A68C1202AAE6707007E090B /* String+Extensions.swift */,
 				0A6584572AAFA56E004587C3 /* Double+Extensions.swift */,
 				0A5309E62AB8E3C8000D9E7B /* NSSet+Extensions.swift */,
+				0A60CB9F2ABCD19100430C3F /* UIViewController+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -94,14 +107,12 @@
 		8D1B49CA291AF24B005185D5 /* BudgetApp */ = {
 			isa = PBXGroup;
 			children = (
+				0A60CBA12ABCD30100430C3F /* ViewControllers */,
 				0A5309E32AB8E2BA000D9E7B /* Models */,
 				0A5309DF2AB8DCC9000D9E7B /* Cells */,
 				0A68C11F2AAE66E8007E090B /* Extensions */,
 				8D1B49CB291AF24B005185D5 /* AppDelegate.swift */,
 				8D1B49CD291AF24B005185D5 /* SceneDelegate.swift */,
-				8D1B49CF291AF24B005185D5 /* BudgetCategoriesTableViewController.swift */,
-				0AED0AF02AABE05B0023B738 /* AddBudgetCategoryViewController.swift */,
-				0A6584552AAF9E85004587C3 /* BudgetDetailsViewController.swift */,
 				8D1B49D4291AF24C005185D5 /* Assets.xcassets */,
 				8D1B49D9291AF24C005185D5 /* Info.plist */,
 				0AED0AED2AABDA6E0023B738 /* BudgetModel.xcdatamodeld */,
@@ -182,6 +193,7 @@
 				0A6584582AAFA56E004587C3 /* Double+Extensions.swift in Sources */,
 				0AED0AEF2AABDA6E0023B738 /* BudgetModel.xcdatamodeld in Sources */,
 				8D1B49D0291AF24B005185D5 /* BudgetCategoriesTableViewController.swift in Sources */,
+				0A60CBA02ABCD19100430C3F /* UIViewController+Extensions.swift in Sources */,
 				8D1B49CC291AF24B005185D5 /* AppDelegate.swift in Sources */,
 				0A5309E52AB8E2E8000D9E7B /* BudgetCategory+CoreDataClass.swift in Sources */,
 				0AED0AF12AABE05B0023B738 /* AddBudgetCategoryViewController.swift in Sources */,

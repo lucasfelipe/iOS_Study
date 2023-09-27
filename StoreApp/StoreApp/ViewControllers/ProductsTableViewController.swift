@@ -15,6 +15,11 @@ class ProductsTableViewController: UITableViewController {
     private var client = StoreHTTPClient()
     private var products: [Product] = []
     
+    lazy var addProductBarItemButton: UIBarButtonItem = {
+        let barButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.add, target: self, action: #selector(addProductButtonPressed))
+        return barButtonItem
+    }()
+    
     init(category: Category) {
         self.category = category
         super.init(nibName: nil, bundle: nil)
@@ -29,10 +34,17 @@ class ProductsTableViewController: UITableViewController {
         title = category.name
         
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "ProductTableViewCell")
+        navigationItem.rightBarButtonItem = addProductBarItemButton
         
         Task {
             await populateProducts()
         }
+    }
+    
+    @objc private func addProductButtonPressed(_ sender: UIBarButtonItem) {
+        let addProductViewController = AddProductViewController()
+        let navigationController = UINavigationController(rootViewController: addProductViewController)
+        present(navigationController, animated: true)
     }
     
     private func populateProducts() async {

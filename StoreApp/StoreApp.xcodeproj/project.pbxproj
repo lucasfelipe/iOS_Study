@@ -18,6 +18,8 @@
 		0A3E874C2AC1F1950059EC17 /* ProductsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A3E874B2AC1F1950059EC17 /* ProductsTableViewController.swift */; };
 		0A3E874F2AC1F6B80059EC17 /* ProductCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A3E874E2AC1F6B80059EC17 /* ProductCellView.swift */; };
 		0A3E87512AC1F9240059EC17 /* Locale+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A3E87502AC1F9240059EC17 /* Locale+Extensions.swift */; };
+		0A5F34712AC4B2DD005F61CE /* AddProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5F34702AC4B2DD005F61CE /* AddProductViewController.swift */; };
+		0AC96D212AC4BE9000CB9CD2 /* CategoryPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC96D202AC4BE9000CB9CD2 /* CategoryPickerView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +36,8 @@
 		0A3E874B2AC1F1950059EC17 /* ProductsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsTableViewController.swift; sourceTree = "<group>"; };
 		0A3E874E2AC1F6B80059EC17 /* ProductCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCellView.swift; sourceTree = "<group>"; };
 		0A3E87502AC1F9240059EC17 /* Locale+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Locale+Extensions.swift"; sourceTree = "<group>"; };
+		0A5F34702AC4B2DD005F61CE /* AddProductViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddProductViewController.swift; sourceTree = "<group>"; };
+		0AC96D202AC4BE9000CB9CD2 /* CategoryPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryPickerView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +88,7 @@
 			children = (
 				0A3E873D2AC1DFEC0059EC17 /* CategoriesTableViewController.swift */,
 				0A3E874B2AC1F1950059EC17 /* ProductsTableViewController.swift */,
+				0A5F34702AC4B2DD005F61CE /* AddProductViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -118,6 +123,7 @@
 			isa = PBXGroup;
 			children = (
 				0A3E874E2AC1F6B80059EC17 /* ProductCellView.swift */,
+				0AC96D202AC4BE9000CB9CD2 /* CategoryPickerView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -191,6 +197,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0A5F34712AC4B2DD005F61CE /* AddProductViewController.swift in Sources */,
 				0A3E87412AC1E3490059EC17 /* StoreHTTPClient.swift in Sources */,
 				0A3E874F2AC1F6B80059EC17 /* ProductCellView.swift in Sources */,
 				0A3E87482AC1E66C0059EC17 /* URL+Extensions.swift in Sources */,
@@ -200,6 +207,7 @@
 				0A3E874C2AC1F1950059EC17 /* ProductsTableViewController.swift in Sources */,
 				0A3E873E2AC1DFEC0059EC17 /* CategoriesTableViewController.swift in Sources */,
 				0A3E874A2AC1EE8A0059EC17 /* Product.swift in Sources */,
+				0AC96D212AC4BE9000CB9CD2 /* CategoryPickerView.swift in Sources */,
 				0A3E87512AC1F9240059EC17 /* Locale+Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

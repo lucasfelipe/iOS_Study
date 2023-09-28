@@ -43,6 +43,7 @@ class ProductsTableViewController: UITableViewController {
     
     @objc private func addProductButtonPressed(_ sender: UIBarButtonItem) {
         let addProductViewController = AddProductViewController()
+        addProductViewController.delegate = self
         let navigationController = UINavigationController(rootViewController: addProductViewController)
         present(navigationController, animated: true)
     }
@@ -71,6 +72,27 @@ class ProductsTableViewController: UITableViewController {
         return cell
     }
     
+}
+
+extension ProductsTableViewController: AddProductViewControllerDelegate {
     
+    func addProductViewControllerDidCancel(controller: AddProductViewController) {
+        controller.dismiss(animated: true)
+    }
+    
+    func addProductViewControllerDidSave(product: Product, controller: AddProductViewController) {
+        
+        let createProductRequest = CreateProductRequest(product: product)
+        Task {
+            do {
+                let newProduct = try await client.createProduct(productRequest: createProductRequest)
+                products.insert(newProduct, at: 0)
+                tableView.reloadData()
+                controller.dismiss(animated: true)
+            } catch {
+                print(error)
+            }
+        }
+    }
     
 }

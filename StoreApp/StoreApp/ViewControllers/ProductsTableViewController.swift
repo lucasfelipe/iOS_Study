@@ -35,9 +35,13 @@ class ProductsTableViewController: UITableViewController {
         
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "ProductTableViewCell")
         navigationItem.rightBarButtonItem = addProductBarItemButton
-        
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(true)
         Task {
             await populateProducts()
+            tableView.reloadData()
         }
     }
     
@@ -63,6 +67,8 @@ class ProductsTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ProductTableViewCell", for: indexPath)
+        cell.accessoryType = .disclosureIndicator
+        
         let product = products[indexPath.row]
         
         cell.contentConfiguration = UIHostingConfiguration(content: {
@@ -70,6 +76,11 @@ class ProductsTableViewController: UITableViewController {
         })
         
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let product = products[indexPath.row]
+        navigationController?.pushViewController(ProductDetailViewController(product: product), animated: true)
     }
     
 }
